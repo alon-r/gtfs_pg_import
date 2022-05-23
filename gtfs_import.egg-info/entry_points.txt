@@ -1,0 +1,3 @@
+[console_scripts]
+gtfs_import = main:cli
+

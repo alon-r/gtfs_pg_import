@@ -1,0 +1,8 @@
+setup.py
+src/main.py
+src/gtfs_import.egg-info/PKG-INFO
+src/gtfs_import.egg-info/SOURCES.txt
+src/gtfs_import.egg-info/dependency_links.txt
+src/gtfs_import.egg-info/entry_points.txt
+src/gtfs_import.egg-info/requires.txt
+src/gtfs_import.egg-info/top_level.txt
