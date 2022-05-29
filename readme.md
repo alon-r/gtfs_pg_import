@@ -12,6 +12,7 @@ Install virtual env
 
     cd gtfs-import
     pip install virtualenv --user
+    python3 -m venv venv
     . venv/bin/activate
 
 Install gtfs-import 
@@ -36,3 +37,10 @@ Collect the sources list and store them in ```gtfs_feed_import``` table
 Download the sources listed in ```gtfs_feed_import``` and upload them to postgres
 
     gtfs_import load-data
+
+## Running in docker
+    make build
+    make start_pg
+    make run_load_sources
+    make run_load_data
+    

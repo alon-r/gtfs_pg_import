@@ -115,7 +115,12 @@ class GTFSSources:
         data = pd.read_csv(redirect_url)
         feed_import = list()
         for index, row in data.iterrows():
-            feed_ts = dateutil.parser.parse(row['location.bounding_box.extracted_on'])
+            try:
+                feed_ts = dateutil.parser.parse(row['location.bounding_box.extracted_on'])
+            except TypeError:
+                self.__logger.error(f"Failed to parse location.bounding_box.extracted_on:"
+                                    f" {row.get('location.bounding_box.extracted_on')}")
+                feed_ts = datetime.now()
             feed_import.append(FeedImport(
                 feed_source='mobility_database',
                 feed_name=row['provider'][:1000],

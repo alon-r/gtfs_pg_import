@@ -5,7 +5,7 @@ setup(
     version='0.1.0',
     py_modules=['main'],
     install_requires=[
-        'pandas==1.4.2',
+        'pandas==1.3.5',
         'requests==2.27.1',
         'SQLAlchemy==1.4.36',
         'GeoAlchemy2==0.11.1',
